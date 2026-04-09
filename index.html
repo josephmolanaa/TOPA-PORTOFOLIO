@@ -1,343 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mustofa Yusuf Maulana</title>
-    <link rel="stylesheet" href="stayle.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300..800&family=Playfair+Display:wght@400..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mustofa Yusuf Maulana — Full Stack Developer specializing in Laravel, MERN Stack, and modern web development. Based in Malang, Indonesia.">
+  <meta name="keywords" content="Mustofa Yusuf, Full Stack Developer, Laravel, React, MERN, PHP, Web Developer, Malang">
+  <title>Mustofa Yusuf Maulana | Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <div id="loading-screen">
-  <div class="loading-content">
-    <i class="fa-solid fa-laptop-code fa-5x main-icon hidden"></i>
 
-    <h1 id="loading-text" class="hidden">PORTOFOLIO</h1>
-
-     <!-- <div class="sub-icons">
-      <i class="fa-brands fa-github fa-2x hidden"></i>
-      <i class="fa-solid fa-code fa-2x hidden"></i>
-      <i class="fa-solid fa-user fa-2x hidden"></i>
-    </div> -->
-
-
-    <h2 id="designer-text" class="hidden">Mustofa Yusuf Maulana</h2>
+  <!-- ===========================
+       LOADING SCREEN
+  ============================ -->
+  <div id="loading-screen">
+    <div class="loader-content">
+      <div class="loader-initials">MY</div>
+      <p class="loader-name">Mustofa Yusuf Maulana</p>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar-fill"></div>
+      </div>
+    </div>
   </div>
-</div>
-    <header class="header-list">
-        <div class="div-list ">
-            <ul class="ul-list">
-                <li class="active">
-                    <i class="fa-regular fa-house"></i>
-                    <a href="#home">Home</a>
-                </li>
-                <li>
-                    <i class="fa-regular fa-address-card"></i>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <i class="fa-regular fa-folder-open"></i>
-                    <a href="#project">Projects</a>
-                </li>
-                <li>
-                    <i class="fa-solid fa-code"></i>
-                    <a href="#services">services</a>
-                </li>
-                <li>
-                    <i class="fa-regular fa-envelope"></i>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
+
+  <!-- ===========================
+       MAIN PAGE
+  ============================ -->
+  <div id="main-page">
+
+    <!-- Header -->
+    <header id="header">
+      <nav class="navbar">
+        <a href="#home" class="logo">MY<span class="logo-dot">.</span></a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home"     class="nav-link active" data-section="home">Home</a></li>
+          <li><a href="#about"    class="nav-link" data-section="about">About</a></li>
+          <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+          <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+          <li><a href="#contact"  class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+            <i class="fa-solid fa-sun"  id="icon-light" style="display:none"></i>
+            <i class="fa-solid fa-moon" id="icon-dark"  style="display:none"></i>
+          </button>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
         </div>
+      </nav>
     </header>
-    <!-- home -->
-    <section class="home" id="home">
-        <p class="home-p">
-            <span class="home-s"></span>Available for freelance work
-        </p>
-        <div class="home-container">
-        <div class="home-section">
-            <div class="info-home">
-                <h1>Hi, I'm Mustofa Yusuf</h1>
-                <h3>Frontend Developer</h3>
-                <div class="info-p">
-                   <p>I create beutiful, function, and user-centerd digital experiences. With</p>
-                   <p>2+ years of experiences in web Development, I bring ideas to life through</p>
-                   <p>clean code and thoughtful design</p>
+
+    <main>
+
+      <!-- ============ HOME ============ -->
+      <section class="section home" id="home">
+        <canvas id="particles-canvas"></canvas>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+
+        <div class="home-content">
+          <div class="status-badge">
+            <span class="status-dot"></span> Available for freelance work
+          </div>
+          <h1 class="hero-title">Hi, I'm <br><span class="gradient-text">Mustofa Yusuf</span></h1>
+          <h2 class="hero-subtitle">
+            <span id="typed-text"></span><span class="cursor">|</span>
+          </h2>
+          <p class="hero-desc">
+            I build beautiful, functional, and user-centered digital experiences.
+            With 2+ years in web development, I bring ideas to life through clean
+            code and thoughtful design.
+          </p>
+          <div class="hero-meta">
+            <span><i class="fa-solid fa-location-dot"></i> Malang, Indonesia</span>
+            <span><i class="fa-solid fa-briefcase"></i> Open to work</span>
+          </div>
+          <div class="hero-btns">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fa-solid fa-envelope"></i> Hire Me
+            </a>
+            <a href="https://github.com/josephmolanaa" target="_blank" class="btn btn-outline">
+              <i class="fa-brands fa-github"></i> View GitHub
+            </a>
+          </div>
+          <div class="hero-socials">
+            <span>Follow me:</span>
+            <a href="https://github.com/josephmolanaa" target="_blank" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap">
+          <div class="hero-glow"></div>
+          <img src="images/img2.jpg" alt="Mustofa Yusuf Maulana" class="hero-img">
+          <div class="hero-img-ring"></div>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section class="section about" id="about">
+        <div class="section-header reveal">
+          <p class="section-tag">ABOUT ME</p>
+          <h2 class="section-title">Building Meaningful <span class="gradient-text">Digital Experiences</span></h2>
+        </div>
+
+        <div class="about-content">
+          <div class="about-img-wrap reveal">
+            <img src="images/img.jpg" alt="Mustofa Yusuf" class="about-img">
+            <div class="about-img-deco"></div>
+          </div>
+
+          <div class="about-info reveal">
+            <p>I'm a passionate full‑stack developer from Malang, Indonesia who loves
+               building modern and responsive web applications. My journey began with
+               a love for design and evolved into a deep curiosity for how the web
+               works — combining logic with creativity to bring ideas to life.</p>
+            <p>When I'm not coding, I enjoy learning new technologies, improving my
+               projects, and exploring better ways to make the web faster and more
+               engaging. I believe in continuous learning, attention to detail, and
+               the power of clean, meaningful design.</p>
+
+            <!-- Stats -->
+            <div class="stats-row">
+              <div class="stat-item">
+                <span class="stat-num" data-target="130">0</span><sup>+</sup>
+                <p>GitHub Contributions</p>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num" data-target="6">0</span><sup>+</sup>
+                <p>Projects Built</p>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num" data-target="2">0</span><sup>+</sup>
+                <p>Years Experience</p>
+              </div>
+            </div>
+
+            <!-- Skills -->
+            <h3 class="skills-title">What I Work With</h3>
+            <div class="skills-grid">
+              <div class="skill-group">
+                <h4><i class="fa-solid fa-layer-group"></i> Frontend</h4>
+                <div class="skill-tags">
+                  <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                  <span>React.js</span><span>SCSS</span>
                 </div>
-                <div class="info-p2">
-                    <p><i class="fa-solid fa-location-dot"></i> Based in Malang</p>
-                    <p><i class="fa-solid fa-briefcase"></i> Available Now</p>
+              </div>
+              <div class="skill-group">
+                <h4><i class="fa-solid fa-server"></i> Backend</h4>
+                <div class="skill-tags">
+                  <span>PHP</span><span>Laravel</span><span>Node.js</span>
+                  <span>Express</span><span>Python</span>
                 </div>
-                <div class="btnn">
-                    <button class="btn-home1" onclick="window.open('https://wa.me/+628123351024', '_blank')">
-                      <i class="fa-solid fa-arrow-right"></i> Hire Me
-                    </button>
-                    <button class="btn-home2"><i class="fa-solid fa-download"></i> Download CV</button>
+              </div>
+              <div class="skill-group">
+                <h4><i class="fa-solid fa-database"></i> Database &amp; Tools</h4>
+                <div class="skill-tags">
+                  <span>MySQL</span><span>MongoDB</span><span>Git</span>
+                  <span>Docker</span><span>Railway</span>
                 </div>
-                <div class="hhr">
-                    <hr>
-                </div>
-                <div class="follow">
-                    <p class="followw">Follow me:</p>
-                    <ul>
-                        <li><a href="#"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    </ul>
-                </div>
+              </div>
             </div>
           </div>
-          <img src="images/img2.jpg" alt="">
         </div>
-    </section>
-    <!-- fine home  -->
-     <section class="about" id="about" >
-        <p id="about">ABOUT ME</p>
-        <div class="title">
-        <h1>Building Meaningful</h1>
-        <h1>Digital Experiences</h1>
-        </div>
-        <div class="hrrr">
-            <hr>
-        </div>
-        <div class="about-container">
-            <div class="info-about">
-            <div class="about-info">
-                <p>
-                    I'm a creative front-end developer passionate about building modern and responsive web experiences.
-                    <br>My journey began with a love for design and evolved into a deep curiosity for how the web works — combining <br> logic with creativity to bring ideas to life.
+      </section>
 
-                </p>
-                <p>
-                    When I'm not coding, I enjoy learning new technologies, improving my projects, <br> and exploring better ways to make the web faster and more engaging.
-                    <br>I believe in continuous learning, attention to detail, and the power of clean, meaningful design
-                </p>
+      <!-- ============ PROJECTS ============ -->
+      <section class="section projects" id="projects">
+        <div class="section-header reveal">
+          <p class="section-tag">MY WORK</p>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-desc">A showcase of real projects demonstrating expertise in full‑stack development, modern frameworks, and creative problem‑solving.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <div class="project-card reveal">
+            <div class="project-img-wrap">
+              <img src="images/Task manager app.jpg" alt="Attendance Management System">
+              <div class="project-overlay">
+                <a href="https://github.com/josephmolanaa/automation-attendance-management-system" target="_blank" class="overlay-btn">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
             </div>
-            <h2>What Drives Me</h2>
-            <div class="card">
-                <div class="c1">
-                    <h3><i class="fa-solid fa-code"></i> Languages</h3>
-                    <p>HTML,CSS,JavaScript,Java,C,React</p>
-                </div>
-                <div class="c1">
-                    <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
-                    <p>Universitas Negeri Malang In Management</p>
-                </div>
-            <div class="c1">
-                    <h3><i class="fa-solid fa-folder-open"></i> Projects</h3>
-                    <p>Built more than 5 projects</p>
-                </div>
+            <div class="project-body">
+              <h3>Attendance Management System</h3>
+              <p>Employee attendance system integrated with Fingerspot devices. Features manual tracking, PDF OCR automation to Excel, and comprehensive reporting.</p>
+              <div class="project-tags">
+                <span>PHP</span><span>Laravel</span><span>Python</span><span>MySQL</span>
+              </div>
             </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-img-wrap">
+              <img src="images/Cleveroad.jpg" alt="MERN Stack E-Commerce">
+              <div class="project-overlay">
+                <a href="https://github.com/josephmolanaa/TUGAS-SIM-ECOMMERCE" target="_blank" class="overlay-btn">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://tugas-sim-ecommerce.vercel.app" target="_blank" class="overlay-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>MERN Stack E‑Commerce</h3>
+              <p>Full‑featured e-commerce application with admin dashboard, product management, user authentication, and a responsive storefront.</p>
+              <div class="project-tags">
+                <span>MongoDB</span><span>Express</span><span>React</span><span>Node.js</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-img-wrap">
+              <img src="images/WordPress dashboard design concept.jpg" alt="Digital Agency Website">
+              <div class="project-overlay">
+                <a href="https://github.com/josephmolanaa/tugas-bisnis-digital-ke2" target="_blank" class="overlay-btn">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://tugas-bisnis-digital.vercel.app" target="_blank" class="overlay-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Digital Agency Website</h3>
+              <p>Multi‑page digital agency template with Services, Team, Pricing, and Testimonials sections. Fully responsive and beautifully designed.</p>
+              <div class="project-tags">
+                <span>SCSS</span><span>JavaScript</span><span>HTML5</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-img-wrap">
+              <img src="images/portofolio ss.png" alt="Portfolio Website">
+              <div class="project-overlay">
+                <a href="https://github.com/josephmolanaa/TOPA-PORTOFOLIO" target="_blank" class="overlay-btn">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://topa-portofolio.vercel.app" target="_blank" class="overlay-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Personal Portfolio Website</h3>
+              <p>This portfolio — a modern single‑page app with dark/light mode, smooth animations, canvas particles, and fully responsive layout.</p>
+              <div class="project-tags">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-img-wrap">
+              <img src="images/Weather Forecast Dashboard.jpg" alt="CNC Flow">
+              <div class="project-overlay">
+                <a href="https://github.com/josephmolanaa/cnc-flow" target="_blank" class="overlay-btn">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>CNC Flow</h3>
+              <p>Laravel‑based web application with Docker containerization support, configured for Railway cloud deployment with a production‑ready setup.</p>
+              <div class="project-tags">
+                <span>PHP</span><span>Laravel</span><span>Docker</span><span>Railway</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-img-wrap">
+              <img src="images/Game Dashboard Design.jpg" alt="Antarctica Auto Expedition">
+              <div class="project-overlay">
+                <a href="https://github.com/josephmolanaa/13-Minutes-Antartica-Auto-Expedition" target="_blank" class="overlay-btn">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Antarctica Auto Expedition</h3>
+              <p>Lua‑based game automation script for Roblox. Automates the 13‑minute Antarctica expedition with optimized pathing and action sequences.</p>
+              <div class="project-tags">
+                <span>Lua</span><span>Roblox</span><span>Automation</span>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <img src="images/img.jpg" alt="My Photo" class="about-img">
+      </section>
+
+      <!-- ============ SERVICES ============ -->
+      <section class="section services" id="services">
+        <div class="section-header reveal">
+          <p class="section-tag">SERVICES</p>
+          <h2 class="section-title">What I <span class="gradient-text">Offer</span></h2>
         </div>
-     </section>
-     <section class="project" id="project">
-        <p>PROJECTS</p>
-        <h1>Featured Work</h1>
-        <hr>
-        <div class="info-pro">
-            <p>A showcase of my recent projects demonstrating expertise in full-stack </p>
-            <p>development, modern frameworks, and creative problem-solving.</p>
+
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>Building responsive, fast, and beautiful websites using modern HTML, CSS, and JavaScript — crafted for great user experiences across all devices.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa-brands fa-laravel"></i>
+            </div>
+            <h3>Laravel Development</h3>
+            <p>Crafting robust backend systems and web apps with PHP Laravel — including REST APIs, authentication, database design, and admin panels.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa-brands fa-react"></i>
+            </div>
+            <h3>MERN Stack Apps</h3>
+            <p>Full‑stack JavaScript applications using MongoDB, Express, React, and Node.js — end-to-end web solutions that scale with your business.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <h3>Automation &amp; Scripting</h3>
+            <p>Building automation scripts with Python and Lua — OCR processing, data extraction from PDFs, Excel reporting, and task automation.</p>
+          </div>
         </div>
-        <div class="projects-container">
+      </section>
 
-    <div class="project-card">
-      <img src="images/Cleveroad.jpg" alt="E-Commerce Website">
-      <h3>E-Commerce Website</h3>
-      <p>Modern online store with product filtering, cart, and payment system.</p>
-      <div class="skills">
-        <a href="#">HTML</a>
-        <a href="#">CSS</a>
-        <a href="#">JavaScript</a>
-      </div>
-      <!-- <div class="btns">
-        <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
-        <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-      </div> -->
-    </div>  
+      <!-- ============ CONTACT ============ -->
+      <section class="section contact" id="contact">
+        <div class="section-header reveal">
+          <p class="section-tag">LET'S TALK</p>
+          <h2 class="section-title">Get in <span class="gradient-text">Touch</span></h2>
+        </div>
 
-    <div class="project-card">
-      <img src="images/portofolio ss.png" alt="Portfolio Website">
-      <h3>Portfolio Website</h3>
-      <p>Personal portfolio to showcase my design and coding projects.</p>
-      <div class="skills">
-        <a href="#">HTML</a>
-        <a href="#">CSS</a>
-        <a href="#">Bootstrap</a>
-      </div>
-      <!-- <div class="btns">
-        <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
-        <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-      </div> -->
-    </div>
-
-    <div class="project-card">
-      <img src="images/Weather Forecast Dashboard.jpg" alt="Weather App">
-      <h3>Weather App</h3>
-      <p>Responsive app showing real-time weather data using API integration.</p>
-      <div class="skills">
-        <a href="#">HTML</a>
-        <a href="#">CSS</a>
-        <a href="#">API</a>
-      </div>
-      <!-- <div class="btns">
-        <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
-        <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-      </div> -->
-    </div>
-
-    <div class="project-card">
-      <img src="images/WordPress dashboard design concept.jpg" alt="Blog Website">
-      <h3>Blog Website</h3>
-      <p>Clean and simple blogging platform with markdown support.</p>
-      <div class="skills">
-        <a href="#">HTML</a>
-        <a href="#">Tailwind</a>
-        <a href="#">JavaScript</a>
-      </div>
-      <!-- <div class="btns">
-        <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
-        <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-      </div> -->
-    </div>
-
-    <div class="project-card">
-      <img src="images/Game Dashboard Design.jpg" alt="Game Landing Page">
-      <h3>Game Landing Page</h3>
-      <p>Landing page for a game with animations and parallax effects.</p>
-      <div class="skills">
-        <a href="#">HTML</a>
-        <a href="#">CSS</a>
-        <a href="#">GSAP</a>
-      </div>
-      <!-- <div class="btns">
-        <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
-        <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-      </div> -->
-    </div>
-
-    <div class="project-card">
-      <img src="images/Task manager app.jpg" alt="Task Manager">
-      <h3>Task Manager</h3>
-      <p>Task tracking web app with CRUD features and clean UI.</p>
-      <div class="skills">
-        <a href="#">HTML</a>
-        <a href="#">CSS</a>
-        <a href="#">JS</a>
-      </div>
-      <!-- <div class="btns">
-        <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
-        <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-      </div> -->
-    </div>
-  </div>
-     </section>
-     <section class="services" id="services">
-        <p>SERVICES</p>
-        <h1>Our Features & Services</h1>
-        <hr>
-        <div class="services-container">
-
-    <div class="service-card">
-      <img src="images/web.svg" alt="Web Development">
-      <h3>Web Development</h3>
-      <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi soluta est veniam sequi nemo.</p> -->
-    </div>
-
-    <div class="service-card">
-      <img src="images/app.svg" alt="App Development">
-      <h3>App Development</h3>
-      <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi soluta est veniam sequi nemo.</p> -->
-    </div>
-
-    <div class="service-card">
-      <img src="images/dm.svg" alt="Digital Marketing">
-      <h3>Digital Marketing</h3>
-      <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi soluta est veniam sequi nemo.</p> -->
-    </div>
-
-    <div class="service-card">
-      <img src="images/seo.svg" alt="Email Marketing">
-      <h3>Email Marketing</h3>
-      <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi soluta est veniam sequi nemo.</p> -->
-    </div>
-
-  </div>
-     </section>
-     <section class="contact" id="contact">
-        <p>CONTACT</p>
-        <h1>Get in Touch with Us</h1>
         <div class="contact-content">
-      <div class="contact-info slide-in-left">
-        <p>I'm always open to discuss exciting projects and new opportunities. Let's collaborate!</p>
-        <div class="contact-details">
-          <div class="contact-item">
-            <i class="fa-solid fa-envelope"></i>
-            <span>mustopayusup12@gmail.com</span>
+          <div class="contact-info reveal">
+            <p>I'm always open to discuss exciting projects and new opportunities.
+               Let's collaborate and build something great together!</p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact-text">
+                  <small>Email</small>
+                  <span>mustopayusup12@gmail.com</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="contact-text">
+                  <small>Location</small>
+                  <span>Malang, Jawa Timur, Indonesia</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <a href="https://github.com/josephmolanaa" target="_blank" class="social-btn" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
           </div>
-          <div class="contact-item">
-            <i class="fa-solid fa-phone"></i>
-            <span>+62123351024</span>
-          </div>
-          <div class="contact-item">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Malang, Jawa Timur, Indonesia</span>
+
+          <div class="contact-form-wrap reveal">
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="user_name">Your Name</label>
+                <input type="text" id="user_name" name="user_name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="user_email">Your Email</label>
+                <input type="email" id="user_email" name="user_email" placeholder="john@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" id="form-submit">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+              </button>
+            </form>
           </div>
         </div>
+      </section>
 
-        <div class="social-links">
-          <!-- <a href="https://github.com/Saboo24" class="social-link" target="_blank">
-            <i class="fa-brands fa-github"></i> -->
-          </a>
-          <a href="https://www.linkedin.com/in/amine-hamzaoui-a2453a35b" class="social-link" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="https://wa.me/+628123351024" class="social-link" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="logo">MY<span class="logo-dot">.</span></a>
+          <p>Building the web, one line at a time.</p>
+        </div>
+        <div class="footer-nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com/josephmolanaa" target="_blank" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
           </a>
         </div>
       </div>
-
-      <div class="contact-form slide-in-right">
-        <form id="contact-form">
-          <div class="form-group">
-            <input type="text" placeholder="Your Name" required name="user_name">
-          </div>
-          <div class="form-group">
-            <input type="email" placeholder="Your Email" required name="user_email">
-          </div>
-          <div class="form-group">
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn-send">Send Message</button>
-        </form>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Mustofa Yusuf Maulana. All Rights Reserved.</p>
+        <button id="back-to-top" class="back-top" aria-label="Back to top">
+          <i class="fa-solid fa-chevron-up"></i>
+        </button>
       </div>
-    </div>
-     </section>
-     <footer class="footer">
-  <div class="footer-container">
-    <h2 class="footer-logo">Mustofa Yusuf</h2>
-    <ul class="footer-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#project">Projects</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="footer-social">
-      <!-- <a href="https://github.com/Saboo24" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a> -->
-      <a href="https://www.linkedin.com/in/amine-hamzaoui-a2453a35b" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://wa.me/213554139526" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-    </div>
-    <p class="footer-copy">&copy; 2025 Amine. All Rights Reserved.</p>
-  </div>
-</footer>
+    </footer>
 
-     <script src="main.js"></script>
+  </div><!-- /#main-page -->
+
+  <script src="main.js"></script>
 </body>
-
 </html>
