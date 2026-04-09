@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateParticleColors() {
     if (isDark()) {
-      particleColor   = 'rgba(129,140,248,0.6)';
-      connectionColor = 'rgba(129,140,248,0.12)';
+      particleColor   = 'rgba(239,68,68,0.6)';
+      connectionColor = 'rgba(239,68,68,0.12)';
     } else {
       particleColor   = 'rgba(99,102,241,0.4)';
       connectionColor = 'rgba(99,102,241,0.08)';
